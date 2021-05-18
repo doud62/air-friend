@@ -5,3 +5,22 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+require 'faker'
+
+#Faker::Name.first_name 
+#Faker::Name.last_name 
+#Faker::Internet.email
+
+puts "Creating users"
+
+5.times do 
+  age = (18..55).rand
+  gender = ["male", "female", "Hélicoptère"].sample
+  User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: Faker::Internet.email, password: "123445", age: age, description: Faker::Lorem.paragraph(sentence_count: 2))
+  3.times do 
+    age = (18..55).rand
+    gender = ["male", "female", "Hélicoptère"].sample 
+    Friend.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, age: age, gender: gender)
+  end
+end
