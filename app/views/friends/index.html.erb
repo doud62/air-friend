@@ -1,0 +1,16 @@
+<h1>Friends</h1>
+
+<table>
+  <tbody>
+    <% @friends.each do |friend| %>
+      <tr>
+        <td><%= friend.first_name %></td>
+        <td><%= friend.last_name %></td>
+        <td><%= link_to 'Know more about your friend', friend %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
