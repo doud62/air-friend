@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :select_booking, to: :update, :edit, :destroy, :show
+  before_action :select_booking, only: [:update, :edit, :destroy, :show]
 
   def index
     @index = Booking.all
