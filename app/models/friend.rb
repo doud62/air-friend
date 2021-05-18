@@ -7,5 +7,4 @@ class Friend < ApplicationRecord
   validates :friend_description, presence: true
   validates :address, presence: true
   validates :price, presence: true
-  validates :image_url, presence: true
 end
