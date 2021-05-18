@@ -1,1 +1,38 @@
-<h1> HEllo </h1>
+  <div class="container">
+    <h1> <%= @user.first_name %> - <%= @user.last_name %></h1>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row my-4">
+    <% @user.friends.each do |plant| %>
+      <div class="col-4">
+        <!-- <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= plant.image_url %>)"> -->
+          <%= @friend.first_name %>
+          <%= @friend.last_name %>
+          <%= @friend.age %>
+          <%= @friend.gender %>
+          <%= @friend.description %>
+          <%#= link_to "+", plant_path(plant), method: :delete, data: { confirm: "Are you sure?" }, class: "card-remove-link" %>
+          <%= link_to friend_path(friend), method: :delete, data: { confirm: "Are you sure?" }, class: "card-remove-link" do %>
+           <!--  <i class="fas fa-trash"></i> -->
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="row my-4">
+    <div class="col-4"></div>
+    <div class="col-4">
+      <h2 class='text-center'>Add a friend</h2>
+
+      <%= simple_form_for [@user, @friend] do |f| %>
+        <%= f.input :first_name, placeholder: 'Michel' %>
+        <%= f.input :last_name, placeholder: '' %>
+        <%= f.input :image_url, placeholder: 'https://machin...' %>
+        <%= f.submit class: 'btn btn-success my-2' %>
+      <% end %>
+    </div>
+  </div>
+</div>
