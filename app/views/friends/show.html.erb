@@ -1,10 +1,12 @@
-<h1> Découvre - moi  </h1>
+  <div id= "show-friends"class="contain">
+    <h1 class='text-center'> Découvre - moi  </h1>
   <h2> <%= @friend.first_name%> - <%= @friend.last_name%> </h2>
   <h3> <%= @friend.age %> ans - <%= @friend.gender%></h3>
   <h4> <%= @friend.address %></h4>
-  <p> <%= @friend.description %></p>
-  <h2> <%= @friend.price %> € /heure</h2>
-<%= link_to'On se capte ?  ', new_friend_booking_path(@friend) %>
-<%= link_to'Pas convaincu ?', friends_path(@friend) %>
-<%= link_to'Le Boss  ', user_path(@friend.user) %>
+  <p class="contain"> <%= @friend.description %></p>
+  <h2> <%= @friend.price %> € /heure </h2>
+<%= link_to'On se capte ?  ' , new_friend_booking_path(@friend), class: "cbtn" %>
+<%= link_to'Pas convaincu ?', friends_path(@friend), class: "cbtn" %>
+<%= link_to'Le Boss  ', user_path(@friend.user), class: "cbtn" %>
+ </div>
 
