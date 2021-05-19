@@ -4,21 +4,28 @@ class BookingsController < ApplicationController
   def index
     @bookings = Booking.all
   end
-  
+
   def show
   end
 
   def new
     @booking = Booking.new
+    @friend = Friend.find(params[:friend_id])
   end
 
   def create
     @booking = Booking.new(booking_params)
-    if @booking.save
-      redirect_to booking_path(@booking)
-    else
-      render :new
-    end
+    @booking.user = current_user
+    @friend = Friend.find(params[:friend_id])
+    @booking.friend = @friend
+    @booking.save!
+
+     if @booking.save
+
+       redirect_to booking_path(@booking)
+     else
+       render :new
+     end
   end
 
   def update
