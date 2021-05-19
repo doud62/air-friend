@@ -1,5 +1,13 @@
-<% @bookings.each do |booking| %>
-  <h2><%= booking.date %></h2>
-  <p><%= booking.duration %> heure(s)</p>
-  <p><%= booking.address %></p>
-<% end %>
+<div class="contain">
+  <% if @bookings.count > 1 %>
+    <h1>Vous avez <%= @bookings.count %> réservations</h1>
+  <% else %>
+    <h1>Vous avez <%= @bookings.count %> réservation</h1>
+  <% end %>
+
+  <% @bookings.each do |booking| %>
+    <h2><%= booking.date %></h2>
+    <p><%= booking.duration %> heure(s)</p>
+    <p><%= booking.address %></p>
+  <% end %>
+</div>

@@ -1,6 +1,9 @@
-<%= simple_form_for [@friend, @booking] do |f| %>
-  <%= f.input :date, :order => [:day, :month, :year]%>
-  <%= f.input :duration, label: "Nombre d'heures", input_html: { min: '1', step: 1 }%>
-  <%= f.input :address, label: "Adresse" %>
-  <%= f.submit %>
-<% end %>
+<div id="booking-form" class="contain">
+<h1>Réserver <%= @friend.first_name %></h1>
+  <%= simple_form_for [@friend, @booking] do |f| %>
+    <%= f.input :date, :order => [:day, :month, :year]%>
+    <%= f.input :duration, label: "Nombre d'heures", input_html: { min: '1', step: 1 }%>
+    <%= f.input :address, label: "Adresse" %>
+    <%= f.submit value: "Réserver", class: "cbtn" %>
+  <% end %>
+</div>
