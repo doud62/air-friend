@@ -1,0 +1,6 @@
+<%= simple_form_for(@booking) do |f| %>
+  <%= f.input :date, :order => [:day, :month, :year]%>
+  <%= f.input :duration, label: "Nombre d'heures", input_html: { min: '1', step: 1 }%>
+  <%= f.input :address, label: "Adresse" %>
+  <%= f.submit %>
+<% end %>

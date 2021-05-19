@@ -1,0 +1,5 @@
+<% @bookings.each do |booking| %>
+  <h2><%= booking.date %></h2>
+  <p><%= booking.duration %> heure(s)</p>
+  <p><%= booking.address %></p>
+<% end %>
