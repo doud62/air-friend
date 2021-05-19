@@ -27,3 +27,14 @@ puts "Creating users"
 
   end
 end
+
+
+user1 = User.find(1)
+user1.description = "J'aime le sirop d'érable, les échecs et le tricot."
+
+user1.save
+
+user2 = User.find(2)
+user2.description = "J'apprécie les moments d'évasion nature et les infusions verveine menthe."
+
+user2.save
