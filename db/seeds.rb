@@ -28,7 +28,6 @@ puts "Creating users"
   end
 end
 
-
 user1 = User.find(1)
 user1.description = "J'aime le sirop d'érable, les échecs et le tricot."
 
