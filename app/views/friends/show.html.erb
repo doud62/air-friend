@@ -4,7 +4,7 @@
   <h4> <%= @friend.address %></h4>
   <p> <%= @friend.description %></p>
   <h2> <%= @friend.price %> € /heure</h2>
-<%= link_to'On se capte ?  ', new_booking_path(@booking) %>
+<%= link_to'On se capte ?  ', new_friend_booking_path(@friend) %>
 <%= link_to'Pas convaincu ?', friends_path(@friend) %>
 <%= link_to'Le Boss  ', user_path(@friend.user) %>
 
