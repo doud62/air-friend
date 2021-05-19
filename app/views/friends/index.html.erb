@@ -1,16 +1,9 @@
-<h1>Friends</h1>
+<h1>Tes futures potes</h1>
 
-<table>
-  <tbody>
     <% @friends.each do |friend| %>
-      <tr>
-        <td><%= friend.first_name %></td>
-        <td><%= friend.last_name %></td>
-        <td><%= link_to 'Know more about your friend', friend %></td>
-    </tr>
+      <ul>
+        <li><%= friend.first_name %>  - <%= friend.last_name %></li>
+        <li><%= link_to 'Découvre ton pote', friend_path(friend) %></li>
+        </ul>
     <% end %>
-  </tbody>
-</table>
-
-<br>
 

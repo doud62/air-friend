@@ -1,1 +1,11 @@
-<h1> HEllo </h1>
+<h1> Le boss </h1>
+  <h2> <%= @user.first_name%> - <%= @user.last_name%> </h2>
+  <h3> <%= @user.age %> ans </h3>
+  <p> <%= @user.description %></p>
+<% @user.friends.each do |friend| %>
+      <ul>
+        <li><%= friend.first_name %>  - <%= friend.last_name %></li>
+        <li><%= link_to 'Découvre ton pote', friend_path(friend) %></li>
+      </ul>
+  <%= link_to "Va voir ailleurs si j'y suis", friends_path(@friend) %>
+<% end %>
