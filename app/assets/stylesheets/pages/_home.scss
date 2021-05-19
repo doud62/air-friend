@@ -1,1 +1,43 @@
 // Specific CSS for your home-page
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $background;
+  margin: 0;
+  padding: 0;
+}
+
+.contain {
+  padding: 2em;
+}
+
+#home-banner {
+  margin-top: -16px;
+  padding: 0 2em;
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  background-image: url("https://source.unsplash.com/random");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  div {
+    margin-left: 4em;
+    h1 {
+      color: #fff;
+      font-weight: 700;
+    }
+    p {
+      color: #fff;
+    }
+  }
+  .cbtn {
+    margin-left: 4em;
+    background-color: $prim;
+  }
+}
