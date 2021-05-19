@@ -1,0 +1,9 @@
+<h1>Tes futures potes</h1>
+
+    <% @friends.each do |friend| %>
+      <ul>
+        <li><%= friend.first_name %>  - <%= friend.last_name %></li>
+        <li><%= link_to 'Découvre ton pote', friend_path(friend) %></li>
+        </ul>
+    <% end %>
+
