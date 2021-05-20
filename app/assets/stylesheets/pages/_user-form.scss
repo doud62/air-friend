@@ -1,0 +1,27 @@
+.log-form {
+  max-width: 500px;
+  margin: 4em auto;
+  padding: 2em;
+  background-color: #fff;
+  border-radius: 8px;
+  -webkit-box-shadow: 7px 7px 117px -64px rgba(0, 85, 100, 0.48);
+  -moz-box-shadow: 7px 7px 117px -64px rgba(0, 85, 100, 0.48);
+  box-shadow: 7px 7px 117px -64px rgba(0, 85, 100, 0.48);
+  .cbtn {
+    color: #fff;
+    background-color: $prim;
+    width: 100%;
+  }
+  .btn-signup {
+    color: $text-common;
+    text-decoration: underline;
+    margin: 1em auto;
+    display: inline-block;
+  }
+  .btn-forgot {
+    color: $text-common;
+    text-decoration: underline;
+    margin: auto;
+    display: inline-block;
+  }
+}
