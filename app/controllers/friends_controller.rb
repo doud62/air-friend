@@ -16,7 +16,9 @@ class FriendsController < ApplicationController
 
   def create
     @friend = Friend.new(friend_params)
-    if @friend.save
+    @friend.user = current_user
+    if @friend.save!
+
       redirect_to friend_path(@friend)
     else
       render :new
