@@ -1,9 +1,29 @@
 .navbar-lewagon {
   padding: 2em;
   justify-content: space-between;
-  background: transparent;
+  background-color: $background;
+  position: sticky;
+  top: 0;
   li a {
     color: $text-common;
+  }
+}
+
+.sessions-links {
+  a {
+    color: $text-common;
+    margin-left: 1em;
+    text-decoration: none;
+  }
+  & a:last-child {
+    padding: 1em;
+    border-radius: 4px;
+    background-color: $prim;
+    color: $background;
+    transition: 0.2s all ease;
+  }
+  a:hover {
+    transform: translateX(15px);
   }
 }
 
@@ -21,3 +41,12 @@
 //   justify-content: space-between;
 //   align-items: center;
 // }
+
+.user-name {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+#navbarDropdown {
+  cursor: pointer;
+}

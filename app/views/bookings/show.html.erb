@@ -1,8 +1,14 @@
-<h2><%= @booking.date %></h2>
-<p><%= @booking.duration %></p>
-<p><%= @booking.address %></p>
+<section class="contain">
+<h1> Ton pote t'attend le : </h1>
+<h2><%= I18n.localize(@booking.date, format: :long) %></h2>
+<p> pour <%= @booking.duration %> heures </p>
+<p> Au : <%= @booking.address %></p>
+<p> Le total est de : <%= @booking.friend.price * @booking.duration %> € </p>
+<img src="https://i.pravatar.cc/">
 
-<%= link_to "Annuler le rendez-vous",
-            booking_path(@booking),
-            method: :delete,
-            data: { confirm: "Voulez-vous vraiment annuler ce rendez-vous ?" } %>
+
+<ul>
+  <li> <%= link_to "Vas-y flemme", booking_path(@booking.id), method: :delete,data: { confirm: "Voulez-vous vraiment annuler ce rendez-vous ?" } %> </li>
+  <li> <%= link_to "Mes réservations",  booking_path %> </li>
+</ul>
+</section>
