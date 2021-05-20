@@ -1,8 +1,6 @@
 <h2><%= @booking.date %></h2>
 <p><%= @booking.duration %></p>
 <p><%= @booking.address %></p>
+<p> Le total est de : <%= @booking.friend.price * @booking.duration %> € </p>
 
-<%= link_to "Annuler le rendez-vous",
-            booking_path(@booking),
-            method: :delete,
-            data: { confirm: "Voulez-vous vraiment annuler ce rendez-vous ?" } %>
+<%= link_to "Annuler le rendez-vous", friends_path, method: :delete,data: { confirm: "Voulez-vous vraiment annuler ce rendez-vous ?" } %>
