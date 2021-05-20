@@ -1,10 +1,10 @@
 <div id="booking-form" class="contain">
 <h1>Publier une annonce</h1>
-  <%= simple_form_for @friend do |f| %>
+  <%= simple_form_for [@friend] do |f| %>
     <%= f.input :first_name, required: true, autofocus: true,label: "Prénom" %>
     <%= f.input :last_name, required: true, autofocus: true, label: "Nom" %>
     <%= f.input :age, label: "Âge", required: true, autofocus: true, input_html: { min: '18', step: 1 } %>
-    <%= f.input :gender, required: true, autofocus: true, label: "Sexe", :collection => [['Femme',1],['Homme',2]]%>
+    <%= f.input :gender, required: true, autofocus: true, label: "Sexe", :collection => [['Femme','Femme'],['Homme','Homme']]%>
     <%= f.input :description, required: true, autofocus: true %>
     <%= f.input :price, required: true, autofocus: true, label: "Prix par heure" %>
     <%= f.input :address, required: true, autofocus: true, label: "Adresse" %>
