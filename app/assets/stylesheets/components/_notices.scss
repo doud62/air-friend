@@ -4,4 +4,9 @@
   width: 100%;
   text-align: center;
   top: 0;
+  transition: 0.5s all ease;
+}
+
+.hidden {
+  top: -60px;
 }
