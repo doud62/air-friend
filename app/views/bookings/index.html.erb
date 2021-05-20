@@ -6,8 +6,8 @@
   <% end %>
 
   <% @bookings.each do |booking| %>
-    <h2><%= booking.date %></h2>
-    <p><%= booking.duration %> heure(s)</p>
+    <h2>Le <%= booking.date.day %> <%= booking.date.month %> <%= booking.date.year %></h2>
+    <p>Durée : <%= booking.duration %> heure(s)</p>
     <p><%= booking.address %></p>
   <% end %>
 </div>
