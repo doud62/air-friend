@@ -1,14 +1,14 @@
 <div id="booking-form" class="contain">
 <h1>Publier une annonce</h1>
   <%= simple_form_for @friend do |f| %>
-    <%= f.input :first_name, label: "Prénom" %>
-    <%= f.input :last_name, label: "Nom" %>
-    <%= f.input :age, label: "Âge", input_html: { min: '18', step: 1 } %>
-    <%= f.input :gender, label: "Sexe", :collection => [['Femme',1],['Homme',2]]%>
-    <%= f.input :description %>
-    <%= f.input :price, label: "Prix par heure" %>
-    <%= f.input :address, label: "Adresse" %>
-    <%= f.input :photo, as: :file, label: "Photo de profil" %>
+    <%= f.input :first_name, required: true, autofocus: true,label: "Prénom" %>
+    <%= f.input :last_name, required: true, autofocus: true, label: "Nom" %>
+    <%= f.input :age, label: "Âge", required: true, autofocus: true, input_html: { min: '18', step: 1 } %>
+    <%= f.input :gender, required: true, autofocus: true, label: "Sexe", :collection => [['Femme',1],['Homme',2]]%>
+    <%= f.input :description, required: true, autofocus: true %>
+    <%= f.input :price, required: true, autofocus: true, label: "Prix par heure" %>
+    <%= f.input :address, required: true, autofocus: true, label: "Adresse" %>
+    <%= f.input :photo, required: true, autofocus: true, as: :file, label: "Photo de profil" %>
     <%= f.submit value: "Créer", class: "cbtn" %>
   <% end %>
 </div>
