@@ -26,11 +26,8 @@
 .title-container {
   width: 100%;
   background-color: $prim;
-  height: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  padding: 3em 0 40vh 0;
+  text-align: center;
   h1 {
     color: $background;
   }
@@ -38,4 +35,11 @@
     color: $background;
     margin-top: 1em;
   }
+}
+
+footer{
+  margin-top: 4em;
+  text-align: center;
+  padding: 2em;
+  color: $text-common;
 }

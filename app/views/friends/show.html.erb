@@ -2,7 +2,7 @@
   <div class="friend-show">
     <h1>Découvrez <%= @friend.first_name%></h1>
     <div class="friend-information">
-      <img src="https://i.pravatar.cc/">
+      <img src="<%= cl_image_path @friend.photo.key, crop: :fill %>">
 
       <div class="information">
         <h2> <%= @friend.first_name%> <%= @friend.last_name.upcase %> </h2>
