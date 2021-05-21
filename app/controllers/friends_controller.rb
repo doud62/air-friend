@@ -1,5 +1,7 @@
 class FriendsController < ApplicationController
-   def index
+  skip_before_action :authenticate_user!, only: [:index, :show]
+
+  def index
     @friends = Friend.all
   end
 
@@ -14,7 +16,9 @@ class FriendsController < ApplicationController
 
   def create
     @friend = Friend.new(friend_params)
-    if @friend.save
+    @friend.user = current_user
+    if @friend.save!
+
       redirect_to friend_path(@friend)
     else
       render :new
@@ -45,6 +49,6 @@ class FriendsController < ApplicationController
   private
 
   def friend_params
-    params.require(:friend).permit(:first_name, :last_name)
+    params.require(:friend).permit(:first_name, :last_name, :photo, :age, :gender, :description, :price, :address)
   end
 end

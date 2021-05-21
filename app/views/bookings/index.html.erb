@@ -1,13 +1,13 @@
 <div class="contain">
-  <% if @bookings.count > 1 %>
-    <h1>Vous avez <%= @bookings.count %> réservations</h1>
-  <% else %>
-    <h1>Vous avez <%= @bookings.count %> réservation</h1>
-  <% end %>
+  <h1>Vous avez <%= current_user.bookings.count %> réservation<%= 's' if current_user.bookings.count > 1 %> </h1>
 
   <% @bookings.each do |booking| %>
-    <h2><%= booking.date %></h2>
-    <p><%= booking.duration %> heure(s)</p>
-    <p><%= booking.address %></p>
+    <% if booking.user == current_user %>
+      <h2>Le <%= I18n.localize(booking.date, format: :long) %></h2>
+      <p>Durée : <%= booking.duration %> heure(s)</p>
+      <p>Adresse : <%= booking.address %></p>
+      <%= link_to "Vas-y flemme", booking_path(booking), method: :delete,data: { confirm: "Voulez-vous vraiment annuler ce rendez-vous ?" } %>
+    <% end %>
   <% end %>
+
 </div>
