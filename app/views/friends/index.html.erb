@@ -2,7 +2,7 @@
   <h1>Nous avons ce qu'il te faut <%= current_user.first_name if user_signed_in?%> !</h1>
   <p><%= @friends.count %> amis à louer</p>
 </div> 
-<section class="contain">
+<section class="custom-contain">
   <ul class="friends-list">
     <% @friends.each do |friend| %>
     <a href="<%= friend_path(friend) %>">

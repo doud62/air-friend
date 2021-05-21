@@ -23,6 +23,7 @@ require("channels");
 // External imports
 import "bootstrap";
 import { hideNotice } from "../channels/notices";
+import { mooveContainer } from "../channels/moove";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
