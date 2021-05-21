@@ -24,10 +24,3 @@ require 'faker'
 #     gender = ["male", "female", "Hélicoptère"].sample
 #     price = (10..90).to_a.sample
 #     Friend.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, age: age, gender: gender, user: user, address: Faker::Address.city, price: price, description: Faker::Lorem.paragraph(sentence_count: 2))
-
-#   end
-# end
-
-Friend.all.each do |friend|
-  friend.destroy
-end

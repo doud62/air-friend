@@ -1,3 +1,5 @@
+<div id="show-users" class="contain">
+
 <h1> Le boss </h1>
   <h2> <%= @user.first_name%> - <%= @user.last_name%> </h2>
   <h3> <%= @user.age %> ans </h3>
@@ -7,5 +9,7 @@
         <li><%= friend.first_name %>  - <%= friend.last_name %></li>
         <li><%= link_to 'Découvre ton pote', friend_path(friend) %></li>
       </ul>
-  <%= link_to "Va voir ailleurs si j'y suis", friends_path(@friend) %>
+  <%= link_to "Va voir ailleurs si j'y suis", friends_path(@friend), class: "cbtn2" %>
 <% end %>
+
+</div>
