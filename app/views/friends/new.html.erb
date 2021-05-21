@@ -1,17 +1,14 @@
-<h1 class="page-title">Créer un ami</h1>
-
-<div class="log-form">
+<div id="booking-form" class="contain">
+<h1>Publier une annonce</h1>
   <%= simple_form_for [@friend] do |f| %>
-
-      <%= f.input :first_name, required: true, autofocus: true,label: "Prénom" %>
-      <%= f.input :last_name, required: true, label: "Nom" %>
-      <%= f.input :age, label: "Âge", required: true, input_html: { min: '18', step: 1 } %>
-      <%= f.input :gender, required: true, label: "Sexe", :collection => [['Femme','Femme'],['Homme','Homme']]%>
-      <%= f.input :description, required: true %>
-      <%= f.input :price, required: true, label: "Prix par heure" %>
-      <%= f.input :address, required: true, label: "Adresse" %>
-      <%= f.input :photo, required: true, as: :file, label: "Photo de profil" %>
-      <%= f.submit value: "Créer un ami", class: "cbtn" %>
-
+    <%= f.input :first_name, required: true, autofocus: true,label: "Prénom" %>
+    <%= f.input :last_name, required: true, autofocus: true, label: "Nom" %>
+    <%= f.input :age, label: "Âge", required: true, autofocus: true, input_html: { min: '18', step: 1 } %>
+    <%= f.input :gender, required: true, autofocus: true, label: "Sexe", :collection => [['Femme','Femme'],['Homme','Homme']]%>
+    <%= f.input :description, required: true, autofocus: true %>
+    <%= f.input :price, required: true, autofocus: true, label: "Prix par heure" %>
+    <%= f.input :address, required: true, autofocus: true, label: "Adresse" %>
+    <%= f.input :photo, required: true, autofocus: true, as: :file, label: "Photo de profil" %>
+    <%= f.submit value: "Créer", class: "cbtn" %>
   <% end %>
 </div>

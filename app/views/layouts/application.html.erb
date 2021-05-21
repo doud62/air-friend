@@ -38,10 +38,7 @@
               <a class="nav-link" href="/friends">Louer un ami</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/friends/new">Créer un ami</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/bookings">Mes réservations</a>
+              <a class="nav-link" href="/bookings">Mes bookings</a>
             </li>
           </ul>
           <% if user_signed_in? %>
@@ -69,7 +66,7 @@
             </div>
             <% else %>
               <div class="sessions-links">
-              <a href=" <%= new_user_registration_path %> ">S'inscrire</a>
+              <a href=" <%= new_user_registration_path %> ">S'incscrire</a>
               <a href=" <%= new_user_session_path %> ">Se connecter</a>
               </div>
             <% end %>
