@@ -3,13 +3,12 @@
 
   <ul class="friends-list">
     <% @friends.each do |friend| %>
-    <a href="<%= friend_path(friend) %>">
-      <li>
-        <img src="https://i.pravatar.cc/">
-        <h2><%= friend.first_name %> <%= friend.last_name %>
-      </li>
-    </a>
-  <% end %>
-    </ul>
-    <%= link_to "+", new_friend_path(@friend) %>
+      <a href="<%= friend_path(friend) %>">
+        <li>
+          <img src="https://i.pravatar.cc/">
+          <h2><%= friend.first_name %> <%= friend.last_name %>
+        </li>
+      </a>
+    <% end %>
+  </ul>
 </section>
