@@ -1,7 +1,8 @@
 <div class="title-container">
+
   <h1>Nous avons ce qu'il te faut <%= current_user.first_name if user_signed_in?%> !</h1>
   <p><%= @friends.count %> amis à louer</p>
-</div> 
+</div>
 <section class="contain">
   <ul class="friends-list">
     <% @friends.each do |friend| %>
