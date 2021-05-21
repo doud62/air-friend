@@ -50,3 +50,8 @@
 #navbarDropdown {
   cursor: pointer;
 }
+
+nav {
+  z-index: 99;
+  border-bottom: 1px solid lightgrey;
+}

@@ -22,3 +22,20 @@
   text-align: center;
   margin: 2em 0;
 }
+
+.title-container {
+  width: 100%;
+  background-color: $prim;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  h1 {
+    color: $background;
+  }
+  p {
+    color: $background;
+    margin-top: 1em;
+  }
+}
