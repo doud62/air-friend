@@ -1,0 +1,36 @@
+.booking-show {
+  list-style: none;
+  background-color: white;
+  width: 100%;
+  padding: 2em;
+  border-radius: 4px;
+
+
+  img{
+    border-radius: 4px;
+    width: 18em;
+    height: 26em;
+    object-fit: cover;
+    margin: 0 2em 0 0;
+  }
+
+  .show-friend-information{
+    margin-top: 2em;
+    display: flex;
+  }
+  
+  .actions {
+    margin-top: 2em;
+  }
+  
+  a:hover {
+    text-decoration: none;
+    color: white;
+  }
+ 
+}
+
+.booking-list {
+  padding-top: 30px;
+  padding-bottom: 10px;
+}

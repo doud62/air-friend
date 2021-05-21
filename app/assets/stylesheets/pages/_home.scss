@@ -34,5 +34,11 @@ body {
   .cbtn {
     margin-left: 4em;
     background-color: $prim;
+    text-decoration: none;
+    transition: 0.2s all ease;
+    &:hover {
+      color: #fff;
+      transform: translateX(15px);
+    }
   }
 }
