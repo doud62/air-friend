@@ -3,7 +3,7 @@
   bottom: 2em;
   right: 2em;
   background-color: $prim;
-  padding: 1.5em;
+  padding: 1em 1.5em;
   border-radius: 4px;
   color: #fff;
   text-decoration: none;
@@ -14,4 +14,14 @@
     text-decoration: none;
     transform: translateX(-15px);
   }
+}
+
+.custom-contain{
+  width: 90%;
+  margin: auto;
+  padding: 4em;
+  margin-top: -37vh;
+  background-color: white;
+  border-radius: 8px;
+  z-index: 1;
 }
