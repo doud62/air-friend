@@ -1,14 +1,24 @@
+<div class="title-container">
+  <h1>Nous avons ce qu'il te faut <%= current_user.first_name if user_signed_in?%> !</h1>
+  <p><%= @friends.count %> amis à louer</p>
+</div> 
 <section class="contain">
-  <h1><%= @friends.count %> amis à louer</h1>
-
   <ul class="friends-list">
     <% @friends.each do |friend| %>
-      <a href="<%= friend_path(friend) %>">
-        <li>
-          <img src="https://i.pravatar.cc/">
-          <h2><%= friend.first_name %> <%= friend.last_name %>
-        </li>
-      </a>
-    <% end %>
-  </ul>
+    <a href="<%= friend_path(friend) %>">
+      <li>
+        <img src="<%= cl_image_path friend.photo.key, crop: :fill %>">
+        <div class="infos-friend">
+          <h2><%= friend.first_name %></h2>
+          <div class="hidden-infos">
+            <p><%= friend.description %></p>
+            <span><%= friend.price %>€</span>
+          </div>
+        </div>
+        <div class="overlay"></div>
+      </li>
+    </a>
+  <% end %>
+    </ul>
+    <%= link_to "+ Add friend", new_friend_path(@friend), class: "add-friend-btn" %>
 </section>

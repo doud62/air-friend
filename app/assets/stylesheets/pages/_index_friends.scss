@@ -1,0 +1,17 @@
+.add-friend-btn {
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+  background-color: $prim;
+  padding: 1.5em;
+  border-radius: 4px;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.2s all ease;
+  z-index: 50;
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+    transform: translateX(-15px);
+  }
+}
